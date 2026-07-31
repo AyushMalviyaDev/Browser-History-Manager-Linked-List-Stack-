@@ -38,3 +38,29 @@ void BrowserHistory::visit(string url)
     // Update current page
     current = newNode;
 }
+
+void BrowserHistory::displayHistory()
+{
+    if(head == NULL)
+    {
+        cout << "History is empty." << endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    cout << "\nBrowsing History:\n";
+    cout << "------------------" << endl;
+
+    while(temp != NULL)
+    {
+        if(temp == current)
+            cout << temp->url << "  <-- Current Page" << endl;
+        else
+            cout << temp->url << endl;
+
+        temp = temp->next;
+    }
+
+    cout << endl;
+}

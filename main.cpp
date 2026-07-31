@@ -7,8 +7,9 @@ int main()
     browser.visit("google.com");
     browser.visit("github.com");
     browser.visit("youtube.com");
+    browser.visit("chatgpt.com");
 
-    cout << "Websites visited successfully!" << endl;
+    browser.displayHistory();
 
     return 0;
 }
