@@ -4,9 +4,11 @@ int main()
 {
     BrowserHistory browser;
 
-    cout << "==============================" << endl;
-    cout << " Browser History Manager" << endl;
-    cout << "==============================" << endl;
+    browser.visit("google.com");
+    browser.visit("github.com");
+    browser.visit("youtube.com");
+
+    cout << "Websites visited successfully!" << endl;
 
     return 0;
 }
