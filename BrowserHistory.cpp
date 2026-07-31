@@ -64,3 +64,19 @@ void BrowserHistory::displayHistory()
 
     cout << endl;
 }
+
+void BrowserHistory::goBack()
+{
+    if(backStack.empty())
+    {
+        cout << "No previous page available." << endl;
+        return;
+    }
+
+    forwardStack.push(current);
+
+    current = backStack.top();
+    backStack.pop();
+
+    cout << "Current Page: " << current->url << endl;
+}

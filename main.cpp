@@ -11,5 +11,10 @@ int main()
 
     browser.displayHistory();
 
+    browser.goBack();
+    browser.goBack();
+
+    browser.displayHistory();
+
     return 0;
 }
