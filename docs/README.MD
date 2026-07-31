@@ -1,10 +1,10 @@
-# 🌐 Browser History Manager (C++)
+# Browser History Manager (C++)
 
 A simple console-based Browser History Manager developed in **C++** using a **Singly Linked List** and **Stacks**. This project simulates basic browser navigation such as visiting websites, going back, going forward, deleting URLs, and displaying browsing history.
 
 ---
 
-## 📌 Features
+## Features
 
 - Visit a new website
 - Navigate Back
@@ -15,7 +15,7 @@ A simple console-based Browser History Manager developed in **C++** using a **Si
 
 ---
 
-## 🛠️ Data Structures Used
+## Data Structures Used
 
 - **Singly Linked List**
   - Stores the complete browsing history.
