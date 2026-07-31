@@ -80,3 +80,69 @@ void BrowserHistory::goBack()
 
     cout << "Current Page: " << current->url << endl;
 }
+
+void BrowserHistory::goForward()
+{
+    if(forwardStack.empty())
+    {
+        cout << "No next page available." << endl;
+        return;
+    }
+
+    backStack.push(current);
+
+    current = forwardStack.top();
+    forwardStack.pop();
+
+    cout << "Current Page: " << current->url << endl;
+}
+
+void BrowserHistory::deleteURL(string url)
+{
+    if(head == NULL)
+    {
+        cout << "History is empty." << endl;
+        return;
+    }
+
+    Node* temp = head;
+    Node* prev = NULL;
+
+    while(temp != NULL && temp->url != url)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if(temp == NULL)
+    {
+        cout << "URL not found." << endl;
+        return;
+    }
+
+    // If deleting the current page
+    if(temp == current)
+    {
+        current = head;
+    }
+
+    // Delete first node
+    if(temp == head)
+    {
+        head = head->next;
+
+        if(head == NULL)
+            tail = NULL;
+    }
+    else
+    {
+        prev->next = temp->next;
+
+        if(temp == tail)
+            tail = prev;
+    }
+
+    delete temp;
+
+    cout << "URL deleted successfully." << endl;
+}

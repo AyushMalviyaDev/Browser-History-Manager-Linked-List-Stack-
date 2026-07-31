@@ -11,8 +11,7 @@ int main()
 
     browser.displayHistory();
 
-    browser.goBack();
-    browser.goBack();
+    browser.deleteURL("youtube.com");
 
     browser.displayHistory();
 
